@@ -43,7 +43,7 @@ const Blog = () => {
             </div>
           </div>
 
-          <div className=" justify-center flex-wrap flex ">
+          <div className=" grid grid-cols-3 gap-1">
             {datas.map((data, key) => {
               console.log(data);
               return <Blogmodel data={data} key={key + 1} />;
