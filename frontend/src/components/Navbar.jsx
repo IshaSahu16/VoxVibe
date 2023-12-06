@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import lock from '../assets/lock.svg'
 import hamburger from '../assets/hamburger.svg'
 import close from '../assets/close.svg'
+import VoxVibe_logo from '../assets/VoxVibe_logo.png'
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -12,15 +13,15 @@ const Navbar = () => {
     <div className='w-full h-[50px] md:h-[77px] bg-white border-b'>
       <div className='md:max-w-[1480px] max-w-[600px] m-auto w-full h-full flex justify-between items-center'>
         <div><Link to="/">
-          <h2 className='text-2xl font-semibold text-[#3c38b4] px-3'>My Home</h2>
-          </Link>
+          <img src={VoxVibe_logo} className='h-[3.9rem] px-[7px] py-1'/>
+        </Link>
         </div>
 
         <div className='hidden md:flex'>
-          <button className='flex justify-between items-center text-lg text-gray-600 font-semibold bg-transparent px-6 gap-2 hover:text-[#4346fa] active:text-[#4346fa]'><Link to="/">Home</Link></button>
-          <button className='flex justify-between items-center text-lg text-gray-600 font-semibold bg-transparent px-6 gap-2 hover:text-[#4346fa] active:text-[#4346fa]'>About</button>
-          <button className='flex justify-between items-center text-lg text-gray-600 font-semibold bg-transparent px-6 gap-2 hover:text-[#4346fa] active:text-[#4346fa]'><Link to="/Blog">Blogs</Link></button>
-          <button className='flex justify-between items-center text-lg text-gray-600 font-semibold bg-transparent px-6 gap-2 hover:text-[#4346fa] active:text-[#4346fa]'>Contact</button>
+          <button className='flex justify-between items-center text-lg text-[#121212da] font-normal bg-transparent px-6 gap-2 hover:text-[#4346fa] active:text-[#4346fa]'><Link to="/">Home</Link></button>
+          <button className='flex justify-between items-center text-lg text-[#121212da] font-normal bg-transparent px-6 gap-2 hover:text-[#4346fa] active:text-[#4346fa]'>About</button>
+          <button className='flex justify-between items-center text-lg text-[#121212da] font-normal bg-transparent px-6 gap-2 hover:text-[#4346fa] active:text-[#4346fa]'><Link to="/Blog">Blogs</Link></button>
+          <button className='flex justify-between items-center text-lg text-[#121212da] font-normal bg-transparent px-6 gap-2 hover:text-[#4346fa] active:text-[#4346fa]'>Contact</button>
         </div>
 
         <div className='hidden md:flex'>

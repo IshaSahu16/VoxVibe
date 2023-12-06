@@ -7,7 +7,7 @@ const Blogmodel = ({ data }) => {
     return (
         <div>
             <div>
-                <section className="pt-20 pb-10 bg-white dark:bg-dark ">
+                <section className="pt-10  bg-white dark:bg-dark ">
                     <div className=" flex container ">
                         <div>
                             <div className="w-full px-4">

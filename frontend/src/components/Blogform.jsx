@@ -4,16 +4,12 @@ import axios from "axios";
 
 const Blogform = () => {
 
-
-
     const [writename, setname] = useState();
     const [title, settitle] = useState();
     const [imgurl, seturl] = useState();
 
     const [content, setcontent] = useState();
     const navigate = useNavigate();
-
-
 
     //   setInterval(() => {
     //     updatedtime(date.getFullYear().toString())
@@ -49,7 +45,7 @@ const Blogform = () => {
 
     return (
         <div>
-            <section className="bg-white">
+            <section className="bg-white drop-shadow-md">
                 <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-[#4346fa]">Create Your Own Blog</h2>
                     <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Unleash Your Thoughts: Share Your Passion, Knowledge, and Stories with the World: Start Blogging Today!</p>

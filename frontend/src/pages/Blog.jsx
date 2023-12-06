@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import Blogmodel from '../components/Blogmodel';
+import Footer from '../components/Footer';
 
 const Blog = () => {
   const [datas, setData] = useState([]);
@@ -22,7 +23,7 @@ const Blog = () => {
 
   return (
     <div>
-      <div className="pt-20 pb-10 lg:pt-[70px] lg:pb-20 bg-white dark:bg-dark">
+      <div className="pt-20 pb-10 lg:pt-[70px] lg:pb-20 bg-white dark:bg-dark drop-shadow-md">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center -mx-4">
             <div className=" px-4">
@@ -52,6 +53,7 @@ const Blog = () => {
           {/* <Blogmodel /> */}
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

@@ -15,7 +15,7 @@ const Loginform = () => {
     .then(result => {
       console.log(result)
       if(result.data === "Success") {
-        navigate('/Createblog')
+        navigate('/')
       }
     })
     .catch(err=> console.log(err))
