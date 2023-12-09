@@ -6,6 +6,8 @@ const BlogModel = require("./models/blogdata");
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser')
+const dotenv = require("dotenv");
+dotenv.config();
 // const morgan = require("morgan")
 
 const app = express()
@@ -90,7 +92,7 @@ app.post('/Signup', async (req, res) => {
         //generate a token for user and send it
         const token = jwt.sign(
             { id: user._id, email },
-            'yrrrr',
+            'process.env.SECRET_KEY', 
             {
                 expiresIn: "2h"
             }
@@ -119,7 +121,7 @@ app.post('/Login', async (req, res) => {
         if (user && (await bcrypt.compare(password, user.password))) {
             const token = jwt.sign(
                 { id: user._id },
-                'yrrrr',
+                'process.env.SECRET_KEY',
                 {
                     expiresIn: "2h"
                 }
@@ -131,10 +133,11 @@ app.post('/Login', async (req, res) => {
             //cookie section
             const options = {
                 expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
-                httpOnly: true
+                httpOnly: true,
+                secure: true,
             };
-            //send a token
-            res.status(200).cookie("token", token, options).json({
+            // send a token
+            res.status(200).cookie('token', token, options).json({
                 success: true,
                 token,
             })
