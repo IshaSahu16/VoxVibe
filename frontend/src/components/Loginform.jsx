@@ -11,8 +11,13 @@ const Loginform = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/Login', {email, password})
-    .then(result => {
+    axios
+      .post(
+        'http://localhost:3001/Login', 
+        {email, password},
+        { withCredentials: true }
+        )
+    .then((result) => {
       console.log(result)
       if(result.data === "Success") {
         navigate('/')
